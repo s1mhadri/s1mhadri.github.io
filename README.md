@@ -1,4 +1,4 @@
-- 👋 Hi, I’m Simhadri Holagundhi
+- 👋 Hi, I’m **Simhadri Holagundhi**
 - 👀 I’m interested in ```Machine Learning, Deep Learning, Computer Vision and HCI```
 - 🌱 I’m currently learning ```Knowledge graphs and Machine learning```
 - 💞️ I’m looking to collaborate on ```Computer Vision and HCI projects```
