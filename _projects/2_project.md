@@ -1,10 +1,10 @@
 ---
 layout: page
-title: project 2
+title: Generative Modelling for Appearance-based Eye Gaze Estimation
 description: a project with a background image and giscus comments
-img: assets/img/3.jpg
-importance: 2
-category: work
+img: assets/img/Model_Overview_Updated.png
+importance: 1
+category: Academic
 giscus_comments: true
 ---
 

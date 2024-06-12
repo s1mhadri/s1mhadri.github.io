@@ -1,10 +1,10 @@
 ---
 layout: page
-title: project 4
+title: Diabetic Retinopathy Detection
 description: another without an image
 img:
-importance: 3
-category: fun
+importance: 1
+category: Academic
 ---
 
 Every project has a beautiful feature showcase page.
