@@ -1,12 +1,11 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - s1mhadri
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - s1mhadri/DeLeRA
+  - s1mhadri/fault_injection_simulation
+  - s1mhadri/GMAGE
+  - s1mhadri/AutomateGitInit
+  - s1mhadri/Diabetic-Retinopathy-Detection
+  - s1mhadri/Human-Activity-Recognition
+  - s1mhadri/QuantumSteganography
