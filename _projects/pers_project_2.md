@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Deep Learning Collection
+title: Machine Learning Collection
 description: another project with an image 🎉
 img: assets/img/6.jpg
 importance: 1
-category: Work
+category: Personal
 ---
 
 Every project has a beautiful feature showcase page.
