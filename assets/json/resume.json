@@ -118,7 +118,7 @@
       "date": "2024-01-26",
       "issuer": "Databricks",
       "url": "https://credentials.databricks.com/afb54baa-f23c-41a9-9822-38958594a15c#gs.a6d7vl",
-      "icon": "fa-solid fa-location-dot"
+      "icon": "fa-solid fa-tag"
     },
     {
       "name": "Image Processing Onramp",

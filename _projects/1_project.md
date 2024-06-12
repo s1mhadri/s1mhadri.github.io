@@ -1,10 +1,10 @@
 ---
 layout: page
-title: project 1
-description: with background image
-img: assets/img/12.jpg
+title: Deep Learning based Risk Assessment for Franka Emika Panda manipulator
+description: ROS Gazebo based fault injection framework for Franka Emika Panda manipulator with Deep Learning based risk assessment
+img: assets/img/ros-gazebo model.png
 importance: 1
-category: work
+category: Academic
 related_publications: true
 ---
 
