@@ -30,7 +30,7 @@
       "startDate": "2022-03-01",
       "endDate": "Present",
       "summary": "",
-      "highlights": ["Relativity"]
+      "highlights": ["Applied research of interaction with multi-agent Large Language Models for multi-criteria decision making.", "Implemented RAG with Large Language Models for customer support.", "Developed a multi-objective search mechanism considering location, environmental, and driving context of cars.", "Contributed to the development of an HMI prototype for proactive interaction in future cars (Patent application in progress).", "Conducted comprehensive exploration, modification, and application of data science and data analytic prototypes.", "Implemented ML models for predicting losses in Electrical Transformers, contributing to resource savings.", "Developed a hands-free User Interface using an eye-tracker for a solar farm maintenance demo."]
     },
     {
       "name": "Analytic Computing, University of Stuttgart",
@@ -39,7 +39,7 @@
       "startDate": "2021-11-01",
       "endDate": "2022-02-28",
       "summary": "",
-      "highlights": ["Relativity"]
+      "highlights": ["Developed application prototype for a mixed reality experience using Microsoft HoloLens.", "Integrated eye-tracking features for real-time guidance and knowledge transfer in medical environments.", "Conducted a detailed study with medical experts to evaluate the product."]
     },
     {
       "name": "Grydsense, Fraunhofer IAO",
@@ -48,7 +48,44 @@
       "startDate": "2019-06-01",
       "endDate": "2019-08-31",
       "summary": "",
-      "highlights": ["Relativity"]
+      "highlights": ["Developed ﬁrmware for ZigBee System-on-Chip (SOC) for Automatic lighting control system.", "Integrated proprietary sensor board with ZigBee SOC."]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Python",
+      "level": "Master",
+      "icon": "fa-solid fa-hashtag",
+      "keywords": [
+        "Pytorch",
+        "LangChain",
+        "HuggingFace",
+        "Pandas",
+        "OpenCV"
+      ]
+    },
+    {
+      "name": "Unity",
+      "level": "Master",
+      "icon": "fa-solid fa-hashtag",
+      "keywords": [
+        "C#",
+        "Mixed Reality Toolkit",
+        "Augmented Reality",
+        "Virtual Reality"
+      ]
+    },
+    {
+      "name": "Robotics",
+      "level": "Intermediate",
+      "icon": "fa-solid fa-hashtag",
+      "keywords": [
+        "C/C++",
+        "ROS",
+        "Gazebo",
+        "Franka Emika Panda",
+        "Embedded Systems"
+      ]
     }
   ],
   "education": [
@@ -91,49 +128,12 @@
       "icon": "fa-solid fa-tag"
     }
   ],
-  "skills": [
-    {
-      "name": "Python",
-      "level": "Master",
-      "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        "Pytorch",
-        "LangChain",
-        "HuggingFace",
-        "Pandas",
-        "OpenCV"
-      ]
-    },
-    {
-      "name": "Unity",
-      "level": "Master",
-      "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        "C#",
-        "Mixed Reality Toolkit",
-        "Augmented Reality",
-        "Virtual Reality"
-      ]
-    },
-    {
-      "name": "Robotics",
-      "level": "Intermediate",
-      "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        "C/C++",
-        "ROS",
-        "Gazebo",
-        "Franka Emika Panda",
-        "Embedded Systems"
-      ]
-    }
-  ],
   "languages": [
     {
       "language": "English",
       "fluency": "Fluent",
       "icon": ""
-    }
+    },
     {
       "language": "German",
       "fluency": "Beginner",
