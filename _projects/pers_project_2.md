@@ -2,7 +2,7 @@
 layout: page
 title: Machine Learning Collection
 description: another project with an image 🎉
-img: assets/img/6.jpg
+img: assets/img/mlcollection.png
 importance: 1
 category: Personal
 ---

@@ -2,7 +2,7 @@
 layout: page
 title: Automate project creation
 description: another project with an image 🎉
-img: assets/img/6.jpg
+img: assets/img/gitautoinit.png
 importance: 1
 category: Personal
 ---
