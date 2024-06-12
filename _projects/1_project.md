@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Deep Learning based Risk Assessment for Franka Emika Panda manipulator
-description: ROS Gazebo based fault injection framework for Franka Emika Panda manipulator with Deep Learning based risk assessment
+description: 
 img: assets/img/ros-gazebo-model.png
 importance: 1
 category: Academic
