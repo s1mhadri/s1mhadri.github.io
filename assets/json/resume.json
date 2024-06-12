@@ -30,7 +30,15 @@
       "startDate": "2022-03-01",
       "endDate": "Present",
       "summary": "",
-      "highlights": ["Applied research of interaction with multi-agent Large Language Models for multi-criteria decision making.", "Implemented RAG with Large Language Models for customer support.", "Developed a multi-objective search mechanism considering location, environmental, and driving context of cars.", "Contributed to the development of an HMI prototype for proactive interaction in future cars (Patent application in progress).", "Conducted comprehensive exploration, modification, and application of data science and data analytic prototypes.", "Implemented ML models for predicting losses in Electrical Transformers, contributing to resource savings.", "Developed a hands-free User Interface using an eye-tracker for a solar farm maintenance demo."]
+      "highlights": [
+        "Applied research of interaction with multi-agent Large Language Models for multi-criteria decision making.",
+        "Implemented RAG with Large Language Models for customer support.",
+        "Developed a multi-objective search mechanism considering location, environmental, and driving context of cars.",
+        "Contributed to the development of an HMI prototype for proactive interaction in future cars (Patent application in progress).",
+        "Conducted comprehensive exploration, modification, and application of data science and data analytic prototypes.",
+        "Implemented ML models for predicting losses in Electrical Transformers, contributing to resource savings.",
+        "Developed a hands-free User Interface using an eye-tracker for a solar farm maintenance demo."
+      ]
     },
     {
       "name": "Analytic Computing, University of Stuttgart",
@@ -39,7 +47,11 @@
       "startDate": "2021-11-01",
       "endDate": "2022-02-28",
       "summary": "",
-      "highlights": ["Developed application prototype for a mixed reality experience using Microsoft HoloLens.", "Integrated eye-tracking features for real-time guidance and knowledge transfer in medical environments.", "Conducted a detailed study with medical experts to evaluate the product."]
+      "highlights": [
+        "Developed application prototype for a mixed reality experience using Microsoft HoloLens.",
+        "Integrated eye-tracking features for real-time guidance and knowledge transfer in medical environments.",
+        "Conducted a detailed study with medical experts to evaluate the product."
+      ]
     },
     {
       "name": "Grydsense, Fraunhofer IAO",
@@ -48,7 +60,10 @@
       "startDate": "2019-06-01",
       "endDate": "2019-08-31",
       "summary": "",
-      "highlights": ["Developed ﬁrmware for ZigBee System-on-Chip (SOC) for Automatic lighting control system.", "Integrated proprietary sensor board with ZigBee SOC."]
+      "highlights": [
+        "Developed ﬁrmware for ZigBee System-on-Chip (SOC) for Automatic lighting control system.",
+        "Integrated proprietary sensor board with ZigBee SOC."
+      ]
     }
   ],
   "skills": [
@@ -56,36 +71,19 @@
       "name": "Python",
       "level": "Master",
       "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        "Pytorch",
-        "LangChain",
-        "HuggingFace",
-        "Pandas",
-        "OpenCV"
-      ]
+      "keywords": ["Pytorch", "LangChain", "HuggingFace", "Pandas", "OpenCV"]
     },
     {
       "name": "Unity",
       "level": "Master",
       "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        "C#",
-        "Mixed Reality Toolkit",
-        "Augmented Reality",
-        "Virtual Reality"
-      ]
+      "keywords": ["C#", "Mixed Reality Toolkit", "Augmented Reality", "Virtual Reality"]
     },
     {
       "name": "Robotics",
       "level": "Intermediate",
       "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        "C/C++",
-        "ROS",
-        "Gazebo",
-        "Franka Emika Panda",
-        "Embedded Systems"
-      ]
+      "keywords": ["C/C++", "ROS", "Gazebo", "Franka Emika Panda", "Embedded Systems"]
     }
   ],
   "education": [
@@ -98,7 +96,13 @@
       "startDate": "2020-10-15",
       "endDate": "2023-10-30",
       "score": "2.3",
-      "courses": ["Deep Learning", "Machine Learning", "Detection and Pattern Recognition", "Scientific Visualization", "Software Engineering for Real-time systems"]
+      "courses": [
+        "Deep Learning",
+        "Machine Learning",
+        "Detection and Pattern Recognition",
+        "Scientific Visualization",
+        "Software Engineering for Real-time systems"
+      ]
     },
     {
       "institution": "Dayananda Sagar College of Engineering",
@@ -144,39 +148,22 @@
       "fluency": "Native Speaker",
       "icon": ""
     }
-    
   ],
   "interests": [
     {
       "name": "Human Centered AI",
       "icon": "fa-solid fa-tag",
-      "keywords": [
-        "Explainable AI",
-        "Human Computer Interaction",
-        "Human Robot Interaction",
-        "Human Perception",
-        "Human Cognition"
-      ]
+      "keywords": ["Explainable AI", "Human Computer Interaction", "Human Robot Interaction", "Human Perception", "Human Cognition"]
     },
     {
       "name": "Large Language Models",
       "icon": "fa-solid fa-tag",
-      "keywords": [
-        "Multi-modal models",
-        "multi-task learning",
-        "multi-agent systems",
-        "Natural Language Processing"
-      ]
+      "keywords": ["Multi-modal models", "multi-task learning", "multi-agent systems", "Natural Language Processing"]
     },
     {
       "name": "Machine Learning",
       "icon": "fa-solid fa-tag",
-      "keywords": [
-        "Computer Vision",
-        "Deep Learning",
-        "Data Analysis",
-        "Predictive Modelling"
-      ]
+      "keywords": ["Computer Vision", "Deep Learning", "Data Analysis", "Predictive Modelling"]
     }
   ],
   "references": [
@@ -195,7 +182,11 @@
     {
       "name": "Deep Learning based Risk Assessment for Franka Emika Panda manipulator",
       "summary": "",
-      "highlights": ["Implemented a data collection pipeline using ROS/Gazebo.", "Developed and evaluated Graph Neural Networks for failure prediction in the Franka Emika Panda manipulator.", "Achieved predictions of failures up to 0.3 seconds in advance."],
+      "highlights": [
+        "Implemented a data collection pipeline using ROS/Gazebo.",
+        "Developed and evaluated Graph Neural Networks for failure prediction in the Franka Emika Panda manipulator.",
+        "Achieved predictions of failures up to 0.3 seconds in advance."
+      ],
       "startDate": "2023-05-11",
       "endDate": "2023-11-11",
       "url": "https://github.com/s1mhadri/DeLeRA"
@@ -203,7 +194,10 @@
     {
       "name": "Generative Modelling for Appearance-based Eye Gaze Estimation",
       "summary": "",
-      "highlights": ["Conducted a quantitative evaluation of the influence of synthetic data on gaze estimation.", "Developed GAN models for data augmentation, improving gaze estimation by 10%."],
+      "highlights": [
+        "Conducted a quantitative evaluation of the influence of synthetic data on gaze estimation.",
+        "Developed GAN models for data augmentation, improving gaze estimation by 10%."
+      ],
       "startDate": "2021-11-22",
       "endDate": "2022-05-22",
       "url": "https://github.com/s1mhadri/GMAGE"
@@ -211,7 +205,10 @@
     {
       "name": "Simulation of Quantum Image Steganography",
       "summary": "",
-      "highlights": ["Designed, implemented and simulated Quantum Steganography on a classical computer.", "Implemented a pipeline for encryption and decryption of secret images for improved security."],
+      "highlights": [
+        "Designed, implemented and simulated Quantum Steganography on a classical computer.",
+        "Implemented a pipeline for encryption and decryption of secret images for improved security."
+      ],
       "startDate": "2019-10",
       "endDate": "2020-04",
       "url": "https://github.com/s1mhadri/QuantumSteganography"
