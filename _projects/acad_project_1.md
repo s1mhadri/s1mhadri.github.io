@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Simulation of Quantum Image Steganography
-description: a project with a background image
-img: assets/img/acad_project_1/QuStegOverview.png
+description:
+img: assets/img/acad_project_1/steganography_cover.png
 importance: 1
 category: Academic
 ---
@@ -21,6 +21,15 @@ The project focuses on secure data transmission by embedding a quantum secret im
 
 ## Methodology
 
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/acad_project_1/QuStegOverview.png" title="Quantum Steganography Overview" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Overview of the project methodology.
+</div>
+
 The project methodology is divided into several key phases:
 
 1. Quantum Image Representation: Utilizing the Novel Enhanced Quantum Representation (NEQR) method.
@@ -34,20 +43,16 @@ The project methodology is divided into several key phases:
 
 ## Results and Discussion
 
-### Visual Quality
-
+**Visual Quality**
 The proposed scheme maintains high visual quality of the stego-image, as indicated by Peak Signal-to-Noise Ratio (PSNR) values ranging between 42 and 43 dB, ensuring that the alterations are imperceptible to the naked eye.
 
-### Payload Capacity
-
+**Payload Capacity**
 The scheme supports a payload capacity of 2 bits per pixel, providing sufficient space for embedding the secret image while maintaining the integrity of the cover image.
 
-### Security
-
+**Security**
 The use of quantum scrambling techniques significantly enhances the security of the embedded data, making it resistant to common steganalysis attacks.
 
-### Comparison
-
+**Comparison**
 The proposed scheme demonstrates superior performance in terms of visual quality and payload capacity when compared to traditional steganography techniques.
 
 ## Conclusion and Future Work
