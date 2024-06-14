@@ -2,7 +2,7 @@
 layout: page
 title: Generative Modelling for Appearance-based Eye Gaze Estimation
 description: a project with a background image and giscus comments
-img: assets/img/Model_Overview_Updated.png
+img: assets/img/acad_project_4/GMAGE_Overview.png
 importance: 1
 category: Academic
 giscus_comments: true

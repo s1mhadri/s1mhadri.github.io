@@ -2,7 +2,7 @@
 layout: page
 title: Deep Learning based Risk Assessment for Franka Emika Panda manipulator
 description:
-img: assets/img/ros-gazebo-model.png
+img: assets/img/acad_project_5/GazeboModel.png
 importance: 1
 category: Academic
 related_publications: true

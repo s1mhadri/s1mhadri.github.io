@@ -2,7 +2,7 @@
 layout: page
 title: Deep Learning Collection
 description: another project with an image 🎉
-img: assets/img/dlcollection.png
+img: assets/img/pers_project_3/dlcollection.png
 importance: 1
 category: Personal
 ---
