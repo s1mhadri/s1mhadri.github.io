@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simhadri Holagundhi — Computer Vision & AI Engineer</title>
+  <meta name="description" content="Portfolio of Simhadri Holagundhi — Computer Vision & AI Engineer building intelligent systems from research to production.">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/index.css">
+</head>
+<body>
+
+  <div id="scroll-progress"></div>
+
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <a href="index.html" class="nav-logo">> simhadri_</a>
+    <ul class="nav-links">
+      <li><a href="experience.html" class="nav-link terminal-nav-btn" data-command="/experience">/experience</a></li>
+      <li><a href="projects.html" class="nav-link terminal-nav-btn" data-command="/projects">/projects</a></li>
+      <li><a href="skills.html" class="nav-link terminal-nav-btn" data-command="/skills">/skills</a></li>
+      <li><a href="education.html" class="nav-link terminal-nav-btn" data-command="/education">/education</a></li>
+      <li><a href="cv.html" class="nav-link terminal-nav-btn" data-command="/cv">/cv</a></li>
+      <li><a href="contact.html" class="nav-link terminal-nav-btn" data-command="/contact">/contact</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Terminal -->
+  <div class="terminal-wrapper">
+    <div class="terminal-chrome">
+      <div class="terminal-dots">
+        <span class="dot dot-red"></span>
+        <span class="dot dot-yellow"></span>
+        <span class="dot dot-green"></span>
+      </div>
+      <span class="terminal-title">visitor@simhadri — bash</span>
+    </div>
+
+    <div id="terminal-area" class="terminal-body">
+      <div id="terminal-output"></div>
+
+      <div id="prompt-line" class="prompt-line" style="display: none;">
+        <span class="prompt-prefix">visitor@simhadri:~$&nbsp;</span>
+        <span class="input-wrapper">
+          <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" aria-label="Terminal command input"><span class="cursor-blink">▊</span>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="terminal-hint">
+    <span class="dim">hint: type</span> <span class="accent">/help</span> <span class="dim">to see all available commands</span>
+  </div>
+
+  <footer class="site-footer">
+    <span class="dim">// built with raw HTML, CSS & JS — </span>
+    <span class="accent">no frameworks, no dependencies</span>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/terminal.js"></script>
+</body>
+</html>

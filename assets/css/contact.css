@@ -1,0 +1,106 @@
+/* ============================================================
+   contact.css — Terminal Command Contact Lines
+   ============================================================ */
+
+.contact-terminal {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  max-width: 600px;
+}
+
+/* --- Contact Line (each link) ------------------------------ */
+.contact-line {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  text-decoration: none;
+  color: var(--fg);
+  font-size: var(--fs-sm);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.contact-line:hover {
+  background: rgba(94, 241, 255, 0.05);
+  border-color: var(--accent);
+  box-shadow: 0 0 15px rgba(94, 241, 255, 0.05);
+}
+
+/* --- Cursor (appears on hover) ----------------------------- */
+.contact-cursor {
+  color: var(--accent);
+  font-weight: 700;
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+  flex-shrink: 0;
+  width: 12px;
+}
+
+.contact-line:hover .contact-cursor {
+  opacity: 1;
+}
+
+/* --- Icon -------------------------------------------------- */
+.contact-icon {
+  width: 18px;
+  height: 18px;
+  color: var(--accent);
+  flex-shrink: 0;
+  transition: filter var(--transition-fast);
+}
+
+.contact-line:hover .contact-icon {
+  filter: drop-shadow(0 0 4px var(--accent-glow));
+}
+
+/* --- Command ----------------------------------------------- */
+.contact-command {
+  color: var(--fg-dim);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* --- Value ------------------------------------------------- */
+.contact-value {
+  color: var(--accent);
+  margin-left: auto;
+  text-align: right;
+  transition: text-shadow var(--transition-fast);
+}
+
+.contact-line:hover .contact-value {
+  text-shadow: 0 0 8px var(--accent-glow);
+}
+
+/* --- Closing Line ------------------------------------------ */
+.contact-closing {
+  margin-top: var(--space-7);
+  font-size: var(--fs-md);
+  text-align: center;
+}
+
+/* --- Responsive -------------------------------------------- */
+@media (max-width: 768px) {
+  .contact-line {
+    flex-wrap: wrap;
+    padding: var(--space-3) var(--space-4);
+    gap: var(--space-2);
+  }
+
+  .contact-command {
+    font-size: var(--fs-xs);
+  }
+
+  .contact-value {
+    width: 100%;
+    margin-left: 0;
+    text-align: left;
+    padding-left: calc(12px + var(--space-3) + 18px + var(--space-2));
+    font-size: var(--fs-xs);
+  }
+}

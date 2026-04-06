@@ -1,0 +1,168 @@
+/* ============================================================
+   education.css — Vertical Chronological Timeline
+   ============================================================ */
+
+/* Reuse timeline layout from experience */
+.timeline {
+  position: relative;
+  padding-left: 160px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 140px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  border-left: 2px dotted var(--border);
+}
+
+/* --- Timeline Entry ---------------------------------------- */
+.timeline-entry {
+  position: relative;
+  margin-bottom: var(--space-7);
+}
+
+/* --- Date Label (on the timeline) -------------------------- */
+.timeline-date-label {
+  position: absolute;
+  left: -160px;
+  top: var(--space-5);
+  width: 125px;
+  text-align: right;
+  color: var(--fg-dim);
+  font-size: var(--fs-xs);
+  white-space: nowrap;
+  line-height: 1.4;
+}
+
+/* --- Marker ------------------------------------------------ */
+.timeline-marker {
+  position: absolute;
+  left: -22px;
+  top: var(--space-5);
+  color: var(--accent);
+  font-size: 10px;
+  width: 24px;
+  text-align: center;
+  text-shadow: 0 0 6px var(--accent-glow);
+}
+
+/* --- Content Card (terminal window) ------------------------ */
+.timeline-content {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.timeline-content:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 20px rgba(94, 241, 255, 0.05);
+}
+
+/* --- Card Chrome ------------------------------------------- */
+.edu-card-chrome {
+  background: var(--surface-2);
+  padding: var(--space-3) var(--space-4);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  border-bottom: 1px solid var(--border);
+}
+
+.edu-card-dots {
+  display: flex;
+  gap: 5px;
+}
+
+.edu-card-dots .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dot-red    { background: #ff5f57; }
+.dot-yellow { background: #febc2e; }
+.dot-green  { background: #28c840; }
+
+.edu-card-title {
+  color: var(--fg-dim);
+  font-size: var(--fs-xs);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --- Card Body --------------------------------------------- */
+.edu-card-body {
+  padding: var(--space-5);
+}
+
+.edu-degree {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: var(--fs-md);
+  margin-bottom: var(--space-2);
+}
+
+.edu-institution {
+  color: var(--fg);
+  font-size: var(--fs-sm);
+  margin-bottom: var(--space-4);
+}
+
+.edu-divider {
+  color: var(--border);
+  font-size: var(--fs-xs);
+  margin-bottom: var(--space-4);
+  overflow: hidden;
+}
+
+.edu-highlight {
+  color: var(--fg);
+  font-size: var(--fs-sm);
+  padding: var(--space-1) 0;
+  line-height: 1.5;
+  padding-left: var(--space-4);
+  position: relative;
+}
+
+.prompt-arrow {
+  color: var(--accent);
+  position: absolute;
+  left: 0;
+}
+
+/* --- End marker -------------------------------------------- */
+.timeline-end {
+  text-align: center;
+  padding: var(--space-4);
+  font-size: var(--fs-sm);
+}
+
+/* --- Responsive -------------------------------------------- */
+@media (max-width: 768px) {
+  .timeline {
+    padding-left: 30px;
+  }
+
+  .timeline::before {
+    left: 8px;
+  }
+
+  .timeline-date-label {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: auto;
+    text-align: left;
+    margin-bottom: var(--space-2);
+    padding-left: 0;
+  }
+
+  .timeline-marker {
+    left: -30px;
+  }
+}
