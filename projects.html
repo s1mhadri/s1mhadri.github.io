@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects — Simhadri Holagundhi</title>
-  <meta name="description" content="Projects by Simhadri Holagundhi — from deep learning risk assessment to quantum image steganography.">
+  <meta name="description"
+    content="Projects by Simhadri Holagundhi — from deep learning risk assessment to quantum image steganography.">
   <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/projects.css">
 </head>
+
 <body>
 
   <div id="scroll-progress"></div>
@@ -45,21 +48,25 @@
         <div class="project-details">
           <div class="project-desc">
             <span class="line-prefix">"""</span>
-            <p>Implemented data collection pipeline using ROS/Gazebo; developed Graph Neural Networks for failure prediction on the Franka Emika Panda manipulator. Predicted hardware failures up to 0.3 seconds in advance.</p>
+            <p>Developed a spatio-temporal risk assessment framework for the Franka Emika Panda robotic manipulator
+              using Graph Neural Networks (STGAT, STGCN-LSTM). Built a processing pipeline for high-dimensional sensor
+              data from ROS bag files to predict safety risks, improving human-robot interaction safety.</p>
             <span class="line-prefix">"""</span>
           </div>
           <div class="project-stack">
             <span class="stack-label">$ pip list --project</span>
             <div class="stack-tags">
               <code>PyTorch</code>
-              <code>GNN</code>
+              <code>GNNs</code>
+              <code>STGAT</code>
               <code>ROS</code>
-              <code>Gazebo</code>
+              <code>Robotics</code>
               <code>Python</code>
             </div>
           </div>
           <div class="project-links">
-            <a href="https://github.com/s1mhadri" target="_blank" rel="noopener" class="project-link">$ open --github</a>
+            <a href="https://github.com/s1mhadri/DeLeRA" target="_blank" rel="noopener" class="project-link">$ open
+              --delera</a>
           </div>
         </div>
       </div>
@@ -74,21 +81,25 @@
         <div class="project-details">
           <div class="project-desc">
             <span class="line-prefix">"""</span>
-            <p>Evaluated synthetic data impact on appearance-based gaze estimation. Developed GAN models that improved gaze estimation accuracy by 10%.</p>
+            <p>Research in appearance-based gaze estimation and redirection using Generative Adversarial Networks
+              (GANs). Synthesized high-fidelity eye images on the MPIIGaze dataset and optimized training using a
+              combination of perceptual, style, and content losses via VGG-16 features.</p>
             <span class="line-prefix">"""</span>
           </div>
           <div class="project-stack">
             <span class="stack-label">$ pip list --project</span>
             <div class="stack-tags">
-              <code>PyTorch</code>
+              <code>TensorFlow</code>
               <code>GANs</code>
               <code>Computer Vision</code>
-              <code>OpenCV</code>
+              <code>Gaze Redirection</code>
+              <code>VGG-16</code>
               <code>Python</code>
             </div>
           </div>
           <div class="project-links">
-            <a href="https://github.com/s1mhadri" target="_blank" rel="noopener" class="project-link">$ open --github</a>
+            <a href="https://github.com/s1mhadri/GMAGE" target="_blank" rel="noopener" class="project-link">$ open
+              --gmage</a>
           </div>
         </div>
       </div>
@@ -103,17 +114,29 @@
         <div class="project-details">
           <div class="project-desc">
             <span class="line-prefix">"""</span>
-            <p>Applied preprocessing, transfer learning, and hyperparameter optimization for detection tasks. Used deep visualization techniques for model interpretability.</p>
+            <p>Multi-domain deep learning suite for medical diagnostic imaging and human behavioral analysis.
+              Implemented CNNs (ResNet, EfficientNet) for diabetic retinopathy grading and temporal models (LSTM, GRU)
+              for human activity recognition from smartphone sensor data. Leveraged PyTorch Lightning, Gin-config, and
+              Ray Tune for training.</p>
             <span class="line-prefix">"""</span>
           </div>
           <div class="project-stack">
             <span class="stack-label">$ pip list --project</span>
             <div class="stack-tags">
               <code>PyTorch</code>
-              <code>Transfer Learning</code>
-              <code>Deep Visualization</code>
+              <code>TensorFlow</code>
+              <code>CNNs</code>
+              <code>LSTM/GRU</code>
+              <code>Ray Tune</code>
+              <code>WandB</code>
               <code>Python</code>
             </div>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/s1mhadri/Diabetic-Retinopathy-Detection" target="_blank" rel="noopener"
+              class="project-link">$ open --dr-detection</a>
+            <a href="https://github.com/s1mhadri/Human-Activity-Recognition" target="_blank" rel="noopener"
+              class="project-link">$ open --har-recognition</a>
           </div>
         </div>
       </div>
@@ -128,7 +151,8 @@
         <div class="project-details">
           <div class="project-desc">
             <span class="line-prefix">"""</span>
-            <p>Designed and simulated a quantum image steganography pipeline. Demonstrated secure image encryption and decryption using quantum computing principles.</p>
+            <p>Designed and simulated a quantum image steganography pipeline. Demonstrated secure image encryption and
+              decryption using quantum computing principles.</p>
             <span class="line-prefix">"""</span>
           </div>
           <div class="project-stack">
@@ -139,6 +163,10 @@
               <code>Simulation</code>
               <code>Python</code>
             </div>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/s1mhadri/QuantumSteganography" target="_blank" rel="noopener"
+              class="project-link">$ open --qusteg</a>
           </div>
         </div>
       </div>
@@ -154,13 +182,13 @@
   <script src="assets/js/main.js"></script>
   <script>
     // Accordion toggle logic
-    document.querySelectorAll('.project-trigger').forEach(function(trigger) {
-      trigger.addEventListener('click', function() {
+    document.querySelectorAll('.project-trigger').forEach(function (trigger) {
+      trigger.addEventListener('click', function () {
         var row = this.closest('.project-row');
         var isOpen = row.classList.contains('open');
 
         // Close all
-        document.querySelectorAll('.project-row.open').forEach(function(r) {
+        document.querySelectorAll('.project-row.open').forEach(function (r) {
           r.classList.remove('open');
           r.querySelector('.project-trigger').setAttribute('aria-expanded', 'false');
         });
@@ -174,4 +202,5 @@
     });
   </script>
 </body>
+
 </html>
