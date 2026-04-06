@@ -191,6 +191,23 @@
     }
   };
 
+  const availableCommands = [
+    '/about',
+    '/whoami',
+    '/experience',
+    '/projects',
+    '/skills',
+    '/education',
+    '/contact',
+    '/help',
+    '/clear'
+  ];
+
+  const suggestionBox = document.getElementById('terminal-suggestion-box');
+  let currentMatches = [];
+  let selectedIndex = -1;
+  let isCycling = false;
+
   function handleCommand(input) {
     const command = input.trim().toLowerCase();
     if (!command) return;
@@ -219,6 +236,51 @@
     }
 
     appendLine('', '');
+    updateSuggestion('', true); // Clear suggestion after command execution
+  }
+
+  function updateSuggestion(input, hide = false, bypassFilter = false) {
+    if (!suggestionBox) return;
+    const value = input.trim();
+    if (hide || !value || !value.startsWith('/')) {
+      suggestionBox.style.display = 'none';
+      currentMatches = [];
+      selectedIndex = -1;
+      isCycling = false;
+      return;
+    }
+
+    if (!bypassFilter) {
+      const valueLower = value.toLowerCase();
+      currentMatches = availableCommands.filter((cmd) => cmd.toLowerCase().startsWith(valueLower));
+    }
+
+    if (currentMatches.length > 0) {
+      suggestionBox.innerHTML = '';
+      suggestionBox.style.display = 'flex';
+
+      currentMatches.forEach((cmd, index) => {
+        const item = document.createElement('div');
+        item.classList.add('suggestion-item');
+        if (index === selectedIndex) {
+          item.classList.add('active');
+          // Scroll into view if selected
+          setTimeout(() => item.scrollIntoView({ block: 'nearest' }), 0);
+        }
+
+        item.innerHTML = `<span class="cmd-name">${cmd}</span>`;
+        item.addEventListener('click', () => {
+          terminalInput.value = cmd;
+          terminalInput.style.width = cmd.length + 'ch';
+          handleCommand(cmd);
+          updateSuggestion('', true);
+        });
+        suggestionBox.appendChild(item);
+      });
+    } else {
+      suggestionBox.style.display = 'none';
+      selectedIndex = -1;
+    }
   }
 
   /* --- Input Handling -------------------------------------- */
@@ -227,15 +289,42 @@
       if (e.key === 'Enter') {
         const value = this.value;
         this.value = '';
-        this.style.width = '1ch';
+        this.style.width = '0ch';
         handleCommand(value);
+      } else if (e.key === 'Tab' || e.key === 'ArrowRight') {
+        if (currentMatches.length > 0) {
+          e.preventDefault();
+          isCycling = true;
+          selectedIndex = (selectedIndex + 1) % currentMatches.length;
+          const match = currentMatches[selectedIndex];
+          this.value = match;
+          this.style.width = match.length + 'ch';
+          updateSuggestion(match, false, true);
+        }
+      } else if (e.key === 'ArrowDown') {
+        if (currentMatches.length > 0) {
+          e.preventDefault();
+          isCycling = true;
+          selectedIndex = (selectedIndex + 1) % currentMatches.length;
+          updateSuggestion(this.value, false, true);
+        }
+      } else if (e.key === 'ArrowUp') {
+        if (currentMatches.length > 0) {
+          e.preventDefault();
+          isCycling = true;
+          selectedIndex = (selectedIndex - 1 + currentMatches.length) % currentMatches.length;
+          updateSuggestion(this.value, false, true);
+        }
       }
     });
 
     // Dynamically resize input to match content so cursor stays adjacent
     terminalInput.addEventListener('input', function () {
+      isCycling = false;
       var len = this.value.length;
-      this.style.width = (len > 0 ? len + 1 : 1) + 'ch';
+      this.style.width = (len > 0 ? len : 0) + 'ch';
+      selectedIndex = -1; // Reset selection on typing
+      updateSuggestion(this.value);
     });
   }
 
