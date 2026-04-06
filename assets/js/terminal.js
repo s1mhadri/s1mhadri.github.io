@@ -69,7 +69,6 @@
     '│  /projects    — Projects & work                  │',
     '│  /skills      — Technical skills                 │',
     '│  /education   — Education background             │',
-    '│  /cv          — View CV / résumé                 │',
     '│  /contact     — Contact information              │',
     '│  /help        — Show this help message           │',
     '│  /clear       — Clear the terminal               │',
@@ -142,13 +141,54 @@
   }
 
   /* --- Command Router -------------------------------------- */
-  const navigationCommands = {
-    '/experience': 'experience.html',
-    '/projects': 'projects.html',
-    '/skills': 'skills.html',
-    '/education': 'education.html',
-    '/contact': 'contact.html',
-    '/cv': 'cv.html',
+  const commandData = {
+    '/experience': {
+      summary: [
+        'Experience across AI Engineering and Research, with roles at 21Minds GmbH and Fraunhofer IAO.',
+        'Focused on shipping GenAI systems (RAG, agent orchestration), applying Computer Vision',
+        '(RF-DETR, WebRTC tracking), and developing proactive AI interfaces from research to deployment.'
+      ],
+      url: 'experience.html',
+      linkText: 'Explore my work experience →'
+    },
+    '/projects': {
+      summary: [
+        'A selection of academic and professional projects including:',
+        '- Deep Learning Risk Assessment for robotic manipulators (GNNs, PyTorch)',
+        '- Appearance-based Gaze Estimation (GANs, OpenCV)'
+      ],
+      url: 'projects.html',
+      linkText: 'View my projects →'
+    },
+    '/skills': {
+      summary: [
+        'Core proficiencies:',
+        '- Languages (Python, C#, C++), AI/ML (PyTorch, LangChain, HuggingFace),',
+        '- Computer Vision (OpenCV, FFmpeg, WebRTC), and AI Agents (Cursor, Claude Code, Ollama).',
+        '- Also experienced with MLOps and Cloud stacks like Docker and Azure.'
+      ],
+      url: 'skills.html',
+      linkText: 'See my complete skills list →'
+    },
+    '/education': {
+      summary: [
+        '[ M.Sc. Information Technology ] - University of Stuttgart, Germany',
+        'Focus: Machine/Deep Learning, Pattern Recognition, and Computer Vision.',
+        '',
+        '[ B.Eng. Electronics & Communication ] - Dayananda Sagar College of Engineering'
+      ],
+      url: 'education.html',
+      linkText: 'View my full academic background →'
+    },
+    '/contact': {
+      summary: [
+        'Email: simhadri1998@gmail.com',
+        '',
+        'Feel free to reach out for opportunities, collaborations, or just to talk tech.'
+      ],
+      url: 'contact.html',
+      linkText: 'Check out my contact page for more links (LinkedIn, GitHub) →'
+    }
   };
 
   function handleCommand(input) {
@@ -165,12 +205,15 @@
       bioText.forEach((line) => appendLine(line, 'bio-text'));
     } else if (command === '/whoami') {
       whoamiText.forEach((line) => appendLine(line, 'accent-text'));
-    } else if (navigationCommands[command]) {
-      appendLine(`Navigating to ${command.slice(1)}...`, 'accent-text');
-      sessionStorage.setItem('navigated', 'true');
-      setTimeout(() => {
-        window.location.href = navigationCommands[command];
-      }, 500);
+    } else if (commandData[command]) {
+      const data = commandData[command];
+      data.summary.forEach((line) => appendLine(line, 'bio-text'));
+
+      const linkLine = document.createElement('div');
+      linkLine.classList.add('terminal-line');
+      linkLine.innerHTML = `<a href="${data.url}" class="accent-text" style="text-decoration: underline; margin-top: 5px; display: inline-block; cursor: pointer;">[ ${data.linkText} ]</a>`;
+      terminalOutput.appendChild(linkLine);
+      scrollToBottom();
     } else {
       appendLine(`command not found: ${command}. Type /help for available commands.`, 'error-text');
     }
