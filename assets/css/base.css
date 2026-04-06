@@ -1,0 +1,383 @@
+/* ============================================================
+   base.css — Terminal Portfolio Design System
+   ============================================================ */
+
+/* --- Google Fonts ------------------------------------------ */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
+
+/* --- CSS Custom Properties --------------------------------- */
+:root {
+  /* Palette */
+  --bg:       #0d0d0d;
+  --bg-alt:   #111111;
+  --surface:  #1a1a1a;
+  --surface-2:#222222;
+  --fg:       #e0e0e0;
+  --fg-dim:   #888888;
+  --dim:      #555555;
+  --accent:   #5ef1ff;
+  --accent-dim: rgba(94, 241, 255, 0.15);
+  --accent-glow: rgba(94, 241, 255, 0.3);
+  --error:    #ff5555;
+  --warning:  #ffb000;
+  --border:   #2a2a2a;
+
+  /* Spacing (8px scale) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  /* Typography */
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+  --fs-xs:   0.7rem;
+  --fs-sm:   0.8rem;
+  --fs-base: 0.9rem;
+  --fs-md:   1rem;
+  --fs-lg:   1.2rem;
+  --fs-xl:   1.5rem;
+  --fs-2xl:  2rem;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 300ms ease;
+  --transition-slow: 500ms ease;
+
+  /* Layout */
+  --max-width: 900px;
+  --nav-height: 50px;
+}
+
+/* --- Reset ------------------------------------------------- */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) var(--surface);
+}
+
+body {
+  font-family: var(--font-mono);
+  font-size: var(--fs-base);
+  line-height: 1.7;
+  color: var(--fg);
+  background-color: var(--bg);
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Scrollbar --------------------------------------------- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--surface);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--dim);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* --- Scanline Overlay -------------------------------------- */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.03) 2px,
+    rgba(0, 0, 0, 0.03) 4px
+  );
+}
+
+/* --- Scroll Progress Bar ----------------------------------- */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background: var(--accent);
+  box-shadow: 0 0 8px var(--accent-glow);
+  z-index: 10000;
+  transition: width 50ms linear;
+}
+
+/* --- Page Transitions -------------------------------------- */
+.page-exit {
+  animation: fadeToBlack var(--transition-base) forwards;
+}
+
+.page-enter {
+  animation: fadeFromBlack var(--transition-base) forwards;
+}
+
+@keyframes fadeToBlack {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+@keyframes fadeFromBlack {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* --- Navigation -------------------------------------------- */
+.site-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--nav-height);
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-5);
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  background: rgba(13, 13, 13, 0.92);
+}
+
+.nav-logo {
+  color: var(--accent);
+  font-size: var(--fs-md);
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.nav-logo:hover {
+  text-shadow: 0 0 10px var(--accent-glow);
+}
+
+.nav-links {
+  display: flex;
+  gap: var(--space-2);
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--fg-dim);
+  text-decoration: none;
+  font-size: var(--fs-sm);
+  padding: var(--space-1) var(--space-3);
+  border: 1px solid transparent;
+  border-radius: 3px;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-dim);
+}
+
+.nav-links a::before {
+  content: '[ ';
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.nav-links a::after {
+  content: ' ]';
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.nav-links a:hover::before,
+.nav-links a:hover::after,
+.nav-links a.active::before,
+.nav-links a.active::after {
+  opacity: 1;
+}
+
+/* Hamburger (mobile) */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--space-2);
+}
+
+.nav-hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--accent);
+  transition: all var(--transition-fast);
+}
+
+.nav-hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.nav-hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.nav-hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* --- Page Container ---------------------------------------- */
+.page-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: calc(var(--nav-height) + var(--space-7)) var(--space-5) var(--space-8);
+}
+
+/* --- Page Header ------------------------------------------- */
+.page-header {
+  margin-bottom: var(--space-7);
+}
+
+.page-header__file {
+  color: var(--accent);
+  font-size: var(--fs-lg);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.page-header__underline {
+  width: 60px;
+  height: 2px;
+  background: var(--accent);
+  margin-top: var(--space-2);
+  box-shadow: 0 0 8px var(--accent-glow);
+}
+
+/* --- Scroll Reveal ----------------------------------------- */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
+}
+
+[data-reveal].visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- Utility Classes --------------------------------------- */
+.accent    { color: var(--accent); }
+.dim       { color: var(--fg-dim); }
+.error     { color: var(--error); }
+.warning   { color: var(--warning); }
+.text-sm   { font-size: var(--fs-sm); }
+.text-xs   { font-size: var(--fs-xs); }
+.mt-1      { margin-top: var(--space-2); }
+.mt-2      { margin-top: var(--space-4); }
+.mt-3      { margin-top: var(--space-6); }
+.mb-1      { margin-bottom: var(--space-2); }
+.mb-2      { margin-bottom: var(--space-4); }
+.mb-3      { margin-bottom: var(--space-6); }
+
+/* --- Footer ------------------------------------------------ */
+.site-footer {
+  text-align: center;
+  padding: var(--space-6) var(--space-5);
+  color: var(--dim);
+  font-size: var(--fs-xs);
+  border-top: 1px solid var(--border);
+  margin-top: var(--space-8);
+}
+
+.site-footer .accent {
+  text-shadow: 0 0 6px var(--accent-glow);
+}
+
+/* --- Responsive -------------------------------------------- */
+@media (max-width: 768px) {
+  :root {
+    --fs-base: 0.82rem;
+    --fs-lg: 1.1rem;
+    --fs-xl: 1.3rem;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: rgba(13, 13, 13, 0.97);
+    border-bottom: 1px solid var(--border);
+    padding: var(--space-4);
+    gap: var(--space-1);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-hamburger {
+    display: flex;
+  }
+
+  .page-container {
+    padding: calc(var(--nav-height) + var(--space-5)) var(--space-4) var(--space-6);
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --fs-base: 0.78rem;
+    --fs-sm: 0.72rem;
+  }
+}
+
+/* --- Reduced Motion ---------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* --- Blinking Cursor --------------------------------------- */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0; }
+}
+
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
