@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} — Simhadri Holagundhi</title>
+  <meta name="description" content="{{ page.description | default: page.title }}">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/post.css">
+</head>
+<body>
+
+  <div id="scroll-progress"></div>
+
+  <nav class="site-nav">
+    <a href="/index.html" class="nav-logo nav-link">> simhadri_</a>
+    <a href="/blog/" class="nav-blog-link nav-link active">/blog</a>
+    <ul class="nav-links">
+      <li><a href="/experience.html" class="nav-link">/experience</a></li>
+      <li><a href="/projects.html" class="nav-link">/projects</a></li>
+      <li><a href="/skills.html" class="nav-link">/skills</a></li>
+      <li><a href="/education.html" class="nav-link">/education</a></li>
+      <li><a href="/cv.html" class="nav-link">/cv</a></li>
+      <li><a href="/contact.html" class="nav-link">/contact</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main class="page-container">
+
+    <div class="post-back" data-reveal>
+      <a href="/blog/" class="post-back-link nav-link">← /blog</a>
+    </div>
+
+    <header class="post-header" data-reveal>
+      <div class="post-header__file">// {{ page.title | downcase | replace: ' ', '_' }}.md</div>
+      <div class="post-header__underline"></div>
+      <div class="post-meta">
+        <span class="post-date dim">{{ page.date | date: "%Y-%m-%d" }}</span>
+      </div>
+      <h1 class="post-title">{{ page.title }}</h1>
+    </header>
+
+    <article class="post-content" data-reveal>
+      {{ content }}
+    </article>
+
+    <div class="post-footer" data-reveal>
+      <div class="post-footer-divider dim">─────────────────────────────────────</div>
+      <a href="/blog/" class="post-back-link nav-link">← back to /blog</a>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <span class="dim">// s1mhadri.github.io — </span>
+    <span class="accent current-year">2026</span>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

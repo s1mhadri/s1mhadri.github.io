@@ -1,0 +1,118 @@
+/* ============================================================
+   blog.css — Blog Listing Page Styles
+   ============================================================ */
+
+/* --- Blog List --------------------------------------------- */
+.blog-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+/* --- Blog Card --------------------------------------------- */
+.blog-card {
+  display: block;
+  text-decoration: none;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: var(--space-5) var(--space-6);
+  transition: border-color var(--transition-base), box-shadow var(--transition-base), transform var(--transition-fast);
+  position: relative;
+  overflow: hidden;
+}
+
+.blog-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--accent);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform var(--transition-base);
+}
+
+.blog-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 16px var(--accent-glow), 0 2px 8px rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+.blog-card:hover::before {
+  transform: scaleY(1);
+}
+
+/* --- Card Date --------------------------------------------- */
+.card-date {
+  font-size: var(--fs-xs);
+  color: var(--fg-dim);
+  font-family: var(--font-mono);
+  margin-bottom: var(--space-2);
+  letter-spacing: 0.5px;
+}
+
+/* --- Card Title -------------------------------------------- */
+.card-title {
+  font-size: var(--fs-lg);
+  font-weight: 600;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  margin-bottom: var(--space-3);
+  letter-spacing: 0.5px;
+  line-height: 1.3;
+  text-shadow: 0 0 8px var(--accent-glow);
+}
+
+/* --- Card Description -------------------------------------- */
+.card-desc {
+  font-size: var(--fs-sm);
+  color: var(--fg);
+  line-height: 1.7;
+  margin-bottom: var(--space-4);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* --- Card Read More ---------------------------------------- */
+.card-read-more {
+  font-size: var(--fs-xs);
+  color: var(--dim);
+  font-family: var(--font-mono);
+  transition: color var(--transition-fast);
+}
+
+.card-arrow {
+  display: inline-block;
+  transition: transform var(--transition-fast);
+}
+
+.blog-card:hover .card-read-more {
+  color: var(--accent);
+}
+
+.blog-card:hover .card-arrow {
+  transform: translateX(4px);
+}
+
+/* --- Empty State ------------------------------------------- */
+.blog-empty {
+  margin-top: var(--space-7);
+  text-align: center;
+  font-size: var(--fs-sm);
+}
+
+/* --- Responsive -------------------------------------------- */
+@media (max-width: 768px) {
+  .blog-card {
+    padding: var(--space-4) var(--space-4);
+  }
+
+  .card-title {
+    font-size: var(--fs-md);
+  }
+}
