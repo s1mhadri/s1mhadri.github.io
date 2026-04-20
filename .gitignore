@@ -1,8 +1,21 @@
+# --- IDEs and OS files ---
 .DS_Store
-node_modules/
 .vscode/
 .idea/
-.plan/
+.ruby-lsp/
+
+# --- Jekyll Specific ---
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# --- Ruby Specific ---
+vendor/bundle/
+.bundle/
 *.log
 
+# --- Personal / Project Specific ---
+node_modules/
+.plans/
 .refs/
