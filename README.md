@@ -2,80 +2,26 @@
 
 ![Portfolio Banner](assets/img/banner.png)
 
-> **Computer Vision & AI Engineer** building intelligent systems from research to production.
+## 📌 Overview
 
-[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen.svg)](https://s1mhadri.github.io)
-[![Tech Stack](https://img.shields.io/badge/tech-HTML%2FCSS%2FJS-blue.svg)](https://github.com/s1mhadri/s1mhadri.github.io)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+A personal portfolio and blog site showcasing my projects, skills, and experience as a Computer Vision & AI Engineer. Designed for developers, engineering managers, and technical recruiters, this portfolio skips the standard web templates in favor of a unique, interactive retro-modern terminal interface. The blog features my learnings and annotated notes documenting my deep dives into 3D computer vision, local LLM inferencing, and other random stuff I find interesting.
 
-A sleek, retro-modern terminal-themed portfolio built with **vanilla HTML, CSS, and JavaScript**. No frameworks, no heavy dependencies, just raw performance and a unique developer-centric aesthetic.
+## 🚀 Checkout
 
----
+**[👉 Experience the live terminal here](https://s1mhadri.github.io)**
 
-## 🚀 Features
+## ✨ Features
 
-- **Interactive Terminal Emulator**: A fully functional CLI on the landing page.
-- **Custom Commands**: Navigate the site using `/projects`, `/experience`, `/skills`, etc.
-- **Responsive Terminal UI**: Designed to look great on desktop and mobile.
-- **ASCII Art & Progress Bars**: Retro-style visualizations for skills and progress.
-- **Timeline-based Navigation**: Clean, vertical/horizontal timelines for education and work history.
-- **Man-page Styled CV**: A professional CV presented in a clean, terminal documentation format.
-- **Micro-animations**: Subtle hover effects and terminal typing animations for a premium feel.
+- **Interactive Terminal UI:** Navigate the entire portfolio via a functioning command-line emulator on the landing page.
+- **Framework-Free Performance:** Hand-crafted with vanilla HTML, CSS, and JS resulting in ultra-fast load times.
+- **Retro-Modern Visuals:** A sleek design system incorporating ASCII art visualizations, glassmorphism, smooth typing animations, and a comfortable dark mode.
+- **Integrated Tech Blog:** Natively supports Markdown-based tech articles, powered statically by Jekyll.
 
-## 🛠️ Built With
+## 📫 Contact
 
-- **HTML5**: Semantic structure for better SEO and accessibility.
-- **Vanilla CSS**: Custom design system with CSS variables, glassmorphism, and responsive layouts.
-- **Vanilla JavaScript**: Custom terminal logic, command parsing, and DOM manipulation.
-- **No Dependencies**: 0 npm packages, 0 frameworks. Ultra-fast load times.
+If you're interested in collaborating or just want to chat about AI and dev side-quests, feel free to reach out.
 
-## 📁 Repository Structure
-
-```text
-.
-├── assets/
-│   ├── css/          # Base styles and page-specific styles
-│   ├── js/           # Terminal logic and main application scripts
-│   └── docs/         # PDF Resume and other documents
-├── index.html        # Landing page (Terminal Emulator)
-├── experience.html   # Professional history timeline
-├── projects.html     # Featured work and research
-├── skills.html       # Technical stack and toolset
-├── education.html    # Academic background
-├── cv.html           # Terminal-themed printable CV
-└── contact.html      # Connection links and form
-```
-
-## ⌨️ Available Commands
-
-On the landing page, you can interact with the terminal:
-
-- `/help` - Show all available commands
-- `/experience` - Navigate to professional experience
-- `/projects` - View my work
-- `/skills` - Check out my tech stack
-- `/education` - View my academic history
-- `/cv` - Open my full CV
-- `/contact` - Get in touch
-- `/clear` - Clear the terminal screen
-
-## 🛠️ Installation & Local Development
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/s1mhadri/s1mhadri.github.io.git
-   cd s1mhadri.github.io
-   ```
-
-2. **Run locally:**
-   Since this is a static site, you can just open `index.html` in your browser, or use a simple local server:
-   ```bash
-   # If you have Python installed
-   python3 -m http.server 8000
-   ```
-
-3. **View the site:**
-   Open `http://localhost:8000` in your browser.
+- ✉️ **Contact:** [s1mhadri.github.io/contact](https://s1mhadri.github.io/contact.html)
 
 ## 📄 License
 
