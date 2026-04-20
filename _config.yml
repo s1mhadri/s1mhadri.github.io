@@ -1,0 +1,19 @@
+title: "Simhadri Holagundhi"
+description: "Computer Vision & AI Engineer — building intelligent systems from research to production."
+url: "https://s1mhadri.github.io"
+baseurl: ""
+
+# Blog permalink style
+permalink: /blog/:year/:month/:day/:title/
+
+# Exclude non-site files from build
+exclude:
+  - README.md
+  - .plan
+  - .refs
+  - Gemfile
+  - Gemfile.lock
+  - "*.gemspec"
+
+plugins:
+  - jekyll-feed
